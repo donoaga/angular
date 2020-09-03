@@ -1,0 +1,27 @@
+.section {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-size: 72px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.section-1 {
+    background-image: url("../../../assets/section-1.jpg");
+  }
+
+  &.section-2 {
+    background-image: url("../../../assets/section-2.jpg");
+  }
+
+  &.section-3 {
+    background-image: url("../../../assets/section-3.jpg");
+  }
+}

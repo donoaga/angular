@@ -1,0 +1,39 @@
+
+.header-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1600px;
+  margin: 20px auto;
+  padding: 10px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  z-index: 10001;
+
+
+  .nav-list {
+    display: flex;
+    margin: 0;
+
+    a {
+      text-decoration: none;
+      outline: none;
+      font-size: 20px;
+      font-weight: 500;
+      margin: 0 15px;
+    }
+  }
+
+  .login-button {
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
+
+
+
