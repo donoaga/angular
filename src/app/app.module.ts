@@ -3,14 +3,14 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {RouterModule} from '@angular/router';
-import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MainPageModule} from './pages/main-page/main-page.module';
-import {UserModule} from './pages/user-pages/user.module';
 import {AppRoutingModule} from './app.routing.module';
 import {HttpClientModule} from '@angular/common/http';
-import {NbDatepickerModule, NbDialogModule, NbMenuModule, NbSidebarModule, NbToastrModule, NbWindowModule} from '@nebular/theme';
+import {MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
+import {AuthJwtService} from './core/auth/auth-jwt.service';
+import {ChartsModule} from 'ng2-charts';
+import {DashboardModule} from './pages/user-pages/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -21,23 +21,15 @@ import {NbDatepickerModule, NbDialogModule, NbMenuModule, NbSidebarModule, NbToa
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
-    CommonModule,
-    FormsModule,
     BrowserAnimationsModule,
     MainPageModule,
-    UserModule,
-    // ThemeModule.forRoot(),
-
-    NbSidebarModule.forRoot(),
-    NbMenuModule.forRoot(),
-    NbDatepickerModule.forRoot(),
-    NbDialogModule.forRoot(),
-    NbWindowModule.forRoot(),
-    NbToastrModule.forRoot(),
-    // CoreModule.forRoot(),
+    DashboardModule,
+    ChartsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},
+    AuthJwtService
+  ], bootstrap: [AppComponent]
 })
 export class AppModule {
 }

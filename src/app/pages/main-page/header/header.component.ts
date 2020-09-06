@@ -45,7 +45,6 @@ export class HeaderComponent implements OnInit {
     dialogRef.afterClosed().subscribe(() => {
       console.log('The dialog was closed');
       this.router.navigate(['/dashboard']);
-
     });
   }
 }

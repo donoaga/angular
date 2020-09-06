@@ -5,11 +5,11 @@ import {RouterModule} from '@angular/router';
 import {LoginDialogComponent} from './login-dialog/login.dialog.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {HomePageComponent} from './home-page.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   imports: [
@@ -17,25 +17,22 @@ import {HomePageComponent} from './home-page.component';
     CommonModule,
     RouterModule,
     MatButtonModule,
-    MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   declarations: [
     HeaderComponent,
     HomePageComponent,
     LoginDialogComponent,
   ],
-  entryComponents: [
-    LoginDialogComponent
-  ],
   exports: [
     HeaderComponent,
-    LoginDialogComponent
   ],
-  providers: []
+  entryComponents: [LoginDialogComponent]
+  , providers: []
 })
 export class MainPageModule {
 
